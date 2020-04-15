@@ -44,5 +44,12 @@ https://medium.com/@thorntonbrenden/rails-and-the-legendary-master-key-15c8be779
 4. Paste in the values of copied in step 1 into the Encrypted files.
 
 
-##### Deploying to Heroku:
-Create a `RAILS_MASTER_KEY` ENV variable. Rails will detect it and use it as your master key, e.g. in Heroku: heroku config:set RAILS_MASTER_KEY=<your-master-key-here>.
+## 3. Deploying to Heroku:
+
+1. Create a Heroku App
+2. Create a `RAILS_MASTER_KEY` ENV variable. Rails will detect it and use it as your master key, e.g. in Heroku: `heroku config:set RAILS_MASTER_KEY=<your-master-key-here>` OR set ENV variable in the Heroku UI.
+3. Deploy your code
+4. Add Heroku Postgres addon.
+5. Once deploy has completed, run `rails db:migrate` on Heroku. `heroku run rails db:migrate -a <your-heroku-app-name>`.
+6. Setup required dynos.
+
