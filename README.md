@@ -4,9 +4,48 @@ A standard set of gems, libraries and configurations we use for our new projects
 
 ## What is included?
 
+*Backend:*
 * PostgreSQL
 * Devise
-*
+* Omniauth
+  * Connect with Google
+  * Connect with Facebook
+* Kaminari
+* Pundit
+* Active Admin
+  * activeadmin_addons
+* Active Storage
+* Sidekiq
+* Redis
+* Friendly IDs
+* Raygun
+
+*Frontend*:
+* HAML
+* Webpacker
+* SASS
+* Simple Forms
+
+*Development tools:*
+* Better Errors
+* Awesome print
+* Hirb
+* Bullet
+* Peek
+* Guard live reloads
+* Annotate
+
+*Models:*
+* User
+* AdminUser (for internal admin)
+
+*Testing:*
+
+* RSPEC
+* Shoulda matchers
+* Factory bot
+* Faker
+* Capybara
 
 
 # Getting started
