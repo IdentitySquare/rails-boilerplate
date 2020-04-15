@@ -35,9 +35,11 @@ gem 'raygun4ruby'
 gem 'sitemap_generator'
 gem 'sidekiq'
 
-
 # Frontend
 gem 'high_voltage', '~> 3.1'
+
+# Other
+gem 'annotate'
 
 
 group :development, :test do
