@@ -33,6 +33,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'friendly_id', '~> 5.2.4'
 gem 'raygun4ruby'
 gem 'sitemap_generator'
+gem 'sidekiq'
 
 
 # Frontend

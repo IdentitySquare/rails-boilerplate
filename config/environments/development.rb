@@ -1,3 +1,6 @@
+# Run Sidekiq tasks synchronously so that Sidekiq is not required in Development
+require 'sidekiq/testing/inline'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
