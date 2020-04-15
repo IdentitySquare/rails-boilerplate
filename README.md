@@ -61,20 +61,16 @@ DO NOT checking this file to Git.
 
 Opens the encrypted file in an editor. We use atom.
 
-All environments:
-
 ```
   EDITOR="atom --wait" rails credentials:edit
 ```
 
-Development specific keys to overwrite the default keys:
+Reading variables:
 ```
-  rails credentials:edit -e production
-  rails credentials:edit -e development
-  rails credentials:edit -e test
+  Rails.application.credentials.send(Rails.env).dig(:hello)
+  Rails.application.credentials.send(Rails.env).dig(:aws, :secret_key)
 ```
 
-https://medium.com/@thorntonbrenden/rails-and-the-legendary-master-key-15c8be7799f1
 
 ##### Changing the `master.key`
 1. Open all the encrypted files, copy the values and save it temporarily.
