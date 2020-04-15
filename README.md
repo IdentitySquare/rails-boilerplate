@@ -25,6 +25,7 @@ A standard set of gems, libraries and configurations we use for our new projects
 * Webpacker
 * SASS
 * Simple Forms
+* High Voltage
 
 *Development tools:*
 * Better Errors
