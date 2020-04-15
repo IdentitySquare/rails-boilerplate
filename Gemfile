@@ -38,9 +38,6 @@ gem 'sidekiq'
 # Frontend
 gem 'high_voltage', '~> 3.1'
 
-# Other
-gem 'annotate'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,8 +56,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'awesome_print'
 
+  gem 'annotate'
   gem 'bullet'
-
   gem 'letter_opener'
 end
 
