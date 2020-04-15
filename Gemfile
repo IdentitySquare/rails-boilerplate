@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 
 # Backend
-
+gem 'activeadmin'
 
 # Frontend
 gem 'high_voltage', '~> 3.1'
