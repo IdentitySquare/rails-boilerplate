@@ -68,8 +68,8 @@ Opens the encrypted file in an editor. We use atom.
 
 Reading variables:
 ```
-  Rails.application.credentials.send(Rails.env).dig(:hello)
-  Rails.application.credentials.send(Rails.env).dig(:aws, :secret_key)
+  Rails.application.credentials.dig(Rails.env.to_sym, :hello)
+  Rails.application.credentials.dig(Rails.env.to_sym, :secret_key)
 ```
 
 
