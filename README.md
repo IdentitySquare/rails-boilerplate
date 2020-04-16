@@ -54,6 +54,10 @@ A standard set of gems, libraries and configurations we use for our new projects
 ## 1. Rename Database name
 Go to `config/database.yml` to change your database names and authentication methods.
 
+```
+ rails db:setup
+```
+
 
 ## 2. Setting your secret keys
 
