@@ -41,6 +41,7 @@ gem 'sidekiq'
 gem 'strong_migrations'
 gem 'valid_email2'
 gem 'pundit'
+gem 'paper_trail'
 
 # Frontend
 gem 'haml-rails', '~> 2.0'
