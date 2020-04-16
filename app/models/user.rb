@@ -36,4 +36,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :trackable #, :timeoutable
+
+  validates :first_name, :last_name, presence: true
+  validates :email, presence: true, 'valid_email_2/email': {disposable_domain: true}
+
 end

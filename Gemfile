@@ -39,10 +39,12 @@ gem 'raygun4ruby'
 gem 'sitemap_generator'
 gem 'sidekiq'
 gem 'strong_migrations'
+gem 'valid_email2'
 
 # Frontend
 gem 'haml-rails', '~> 2.0'
 gem 'high_voltage', '~> 3.1'
+gem 'simple_form'
 
 
 group :development, :test do

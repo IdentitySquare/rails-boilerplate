@@ -216,6 +216,9 @@ GEM
       rack (~> 2.0)
       rack-protection (>= 2.0.0)
       redis (>= 4.1.0)
+    simple_form (5.0.2)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     sitemap_generator (6.1.0)
       builder (~> 3.0)
     spring (2.1.0)
@@ -241,6 +244,9 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uniform_notifier (1.13.0)
+    valid_email2 (3.2.2)
+      activemodel (>= 3.2)
+      mail (~> 2.5)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.1)
@@ -281,12 +287,14 @@ DEPENDENCIES
   raygun4ruby
   sass-rails (>= 6)
   sidekiq
+  simple_form
   sitemap_generator
   spring
   spring-watcher-listen (~> 2.0.0)
   strong_migrations
   turbolinks (~> 5)
   tzinfo-data
+  valid_email2
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
 
