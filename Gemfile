@@ -18,9 +18,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
-gem 'haml-rails', "~> 2.0"
 #Devise for user authentictaion
 gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -34,10 +34,25 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 
 # Backend
+gem 'friendly_id', '~> 5.2.4'
+gem 'raygun4ruby'
+gem 'sitemap_generator'
+gem 'sidekiq'
+gem 'strong_migrations'
+gem 'valid_email2'
+gem 'pundit'
+gem 'paper_trail'
+gem 'strong_password'
 
+gem 'activeadmin'
+gem 'activeadmin_addons'
 
 # Frontend
+gem 'haml-rails', '~> 2.0'
 gem 'high_voltage', '~> 3.1'
+gem 'simple_form'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 
 group :development, :test do
@@ -52,6 +67,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
+
+  gem 'annotate'
+  gem 'bullet'
+  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
