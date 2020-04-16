@@ -17,23 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_for_paper_trail
-    if current_admin_user
-      current_admin_user.id
-    elsif current_user
-      current_user.id
-    else
-      'Unknown User'
-    end
-  end
-
-  def info_for_paper_trail
-    if current_admin_user
-      class_name = AdminUser
-    elsif current_user
-      class_name = User
-    end
-
-    {whodunnit_type: class_name}
+    current_admin_user || current_user
   end
 
   private

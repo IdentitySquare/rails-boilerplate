@@ -1,3 +1,10 @@
+$am-theme-primary: #232b3a;
+$am-theme-primary-700: #232b3a;
+$am-theme-accent: #4879f0;
+// $am-theme-accent-fallback: #ff7547;
+
+@import 'activeadmin_addons/all';
+@import 'activeadmin_addons/material';
 // SASS variable overrides must be declared before loading up Active Admin's styles.
 //
 // To view the variables that Active Admin provides, take a look at
@@ -8,8 +15,8 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
-@import "active_admin/mixins";
-@import "active_admin/base";
+// @import "active_admin/mixins";
+// @import "active_admin/base";
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:

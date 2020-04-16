@@ -32,6 +32,8 @@ class AdminUser < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :lockable, :timeoutable, :trackable
 
+  # Security first especially for an admin user
+  # Use password generator: https://passwordsgenerator.net/
   validates :password, password_strength: {min_entropy: 25, use_dictionary: true}, on: [:create]
-  
+
 end
