@@ -68,8 +68,6 @@ yarn-debug.log*
 !/storage/.keep
 /public/uploads
 
-/config/credentials/development.key
-
-/config/credentials/production.key
-
-/config/credentials/test.key
+# intellij
+.rakeTasks
+.idea/

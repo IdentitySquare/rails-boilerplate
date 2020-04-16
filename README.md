@@ -68,8 +68,8 @@ Opens the encrypted file in an editor. We use atom.
 
 Reading variables:
 ```
-  Rails.application.credentials.send(Rails.env).dig(:hello)
-  Rails.application.credentials.send(Rails.env).dig(:aws, :secret_key)
+  Rails.application.credentials.dig(Rails.env.to_sym, :hello)
+  Rails.application.credentials.dig(Rails.env.to_sym, :secret_key)
 ```
 
 
@@ -92,3 +92,13 @@ Reading variables:
 8. Provision Redis for Sidekiq
 9. Restart all dynos
 
+## 4. Outbound Emails in production
+
+On Heroku use Mailgun or setup the following ENV variables:
+
+```ruby
+  ENV['SMTP_USERNAME']
+  ENV['SMTP_PASSWORD']
+  ENV['SMTP_ADDRESS']
+  ENV['MAILGUN_SMTP_PORT']
+```

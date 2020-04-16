@@ -1,0 +1,50 @@
+$am-theme-primary: #15191c;
+$am-theme-primary-700: #7755f8;
+$am-theme-accent: #3c88fd;
+// $am-theme-accent-fallback: #ff7547;
+$am-theme-backdrop: #f5f5f5;
+
+@import 'activeadmin_addons/all';
+@import 'activeadmin_addons/material';
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+// @import "active_admin/mixins";
+// @import "active_admin/base";
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+
+.panel_contents > .active_admin_comment, .panel_contents > .pagination_information, .panel_contents > .empty {
+  padding: 16px;
+}
+
+form.formtastic.active_admin_comment {
+  padding: 0;
+}
+
+.filter_form_field input, .filter_form_field .select2-container {
+  margin-right: 10px !important;
+}
+
+body.active_admin.admin_dashboard #main_content {
+  background: transparent;
+  box-shadow: none;
+  .panel {
+    margin-top: 20px;
+  }
+}
+
+.columns .column {
+  float: left;
+}

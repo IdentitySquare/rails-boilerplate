@@ -17,6 +17,10 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+
+#Devise for user authentictaion
+gem 'devise'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -28,15 +32,28 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-
 # Backend
 gem 'friendly_id', '~> 5.2.4'
 gem 'raygun4ruby'
 gem 'sitemap_generator'
 gem 'sidekiq'
+gem 'strong_migrations'
+gem 'valid_email2'
+gem 'pundit'
+gem 'paper_trail'
+gem 'strong_password'
+
+gem 'activeadmin'
+gem 'activeadmin_addons'
+gem 'pretender'
+
 
 # Frontend
+gem 'haml-rails', '~> 2.0'
 gem 'high_voltage', '~> 3.1'
+gem 'simple_form'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 
 group :development, :test do
