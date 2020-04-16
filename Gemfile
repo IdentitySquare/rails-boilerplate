@@ -40,11 +40,14 @@ gem 'sitemap_generator'
 gem 'sidekiq'
 gem 'strong_migrations'
 gem 'valid_email2'
+gem 'pundit'
 
 # Frontend
 gem 'haml-rails', '~> 2.0'
 gem 'high_voltage', '~> 3.1'
 gem 'simple_form'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 
 group :development, :test do
