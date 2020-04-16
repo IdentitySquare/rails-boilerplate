@@ -34,7 +34,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 
 # Backend
-
+gem 'friendly_id', '~> 5.2.4'
+gem 'raygun4ruby'
+gem 'sitemap_generator'
+gem 'sidekiq'
 
 # Frontend
 gem 'high_voltage', '~> 3.1'
@@ -52,6 +55,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
+
+  gem 'annotate'
+  gem 'bullet'
+  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

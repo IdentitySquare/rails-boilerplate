@@ -18,7 +18,6 @@ A standard set of gems, libraries and configurations we use for our new projects
 * Sidekiq
 * Redis
 * Friendly IDs
-* Raygun
 
 *Frontend*:
 * HAML
@@ -35,6 +34,7 @@ A standard set of gems, libraries and configurations we use for our new projects
 * Peek
 * Guard live reloads
 * Annotate
+* Letter opener
 
 *Models:*
 * User
@@ -88,4 +88,7 @@ Reading variables:
 4. Add Heroku Postgres addon.
 5. Once deploy has completed, run `rails db:migrate` on Heroku. `heroku run rails db:migrate -a <your-heroku-app-name>`.
 6. Setup required dynos.
+7. Worker setup for Sidekiq
+8. Provision Redis for Sidekiq
+9. Restart all dynos
 
