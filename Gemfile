@@ -38,6 +38,7 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'raygun4ruby'
 gem 'sitemap_generator'
 gem 'sidekiq'
+gem 'strong_migrations'
 
 # Frontend
 gem 'haml-rails', '~> 2.0'
