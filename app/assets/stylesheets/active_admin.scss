@@ -1,7 +1,8 @@
-$am-theme-primary: #232b3a;
-$am-theme-primary-700: #232b3a;
-$am-theme-accent: #4879f0;
+$am-theme-primary: #15191c;
+$am-theme-primary-700: #7755f8;
+$am-theme-accent: #3c88fd;
 // $am-theme-accent-fallback: #ff7547;
+$am-theme-backdrop: #f5f5f5;
 
 @import 'activeadmin_addons/all';
 @import 'activeadmin_addons/material';
@@ -22,3 +23,16 @@ $am-theme-accent: #4879f0;
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+
+.panel_contents > .active_admin_comment, .panel_contents > .pagination_information, .panel_contents > .empty {
+  padding: 16px;
+}
+
+form.formtastic.active_admin_comment {
+  padding: 0;
+}
+
+.filter_form_field input, .filter_form_field .select2-container {
+  margin-right: 10px !important;
+}

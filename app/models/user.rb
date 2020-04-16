@@ -42,4 +42,8 @@ class User < ApplicationRecord
   validates :first_name, :last_name, presence: true
   validates :email, presence: true, 'valid_email_2/email': {disposable_domain: true}
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
 end
