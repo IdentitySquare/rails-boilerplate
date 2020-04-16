@@ -28,4 +28,22 @@ ActiveAdmin.register User do
     f.actions
   end
 
+  member_action :impersonate, method: :post do
+    if user_signed_in?
+      impersonate_user(resource)
+      redirect_to root_path, notice: "Logged in as #{resource.full_name}!"
+    else
+      redirect_to admin_user_path(resource), notice: "You need to be logged in as a normal user first before trying to impersonate someone else."
+    end
+  end
+
+  action_item :impersonate, only: :show  do
+    link_to "Impersonate", impersonate_admin_user_path(resource), method: :post, data: {confirm: 'Are you sure you would like to act as this user?'}
+  end
+
+  collection_action :stop_impersonating, method: :post do
+    stop_impersonating_user
+    redirect_to collection_path, notice: "Back to yourself!"
+  end
+
 end

@@ -36,3 +36,15 @@ form.formtastic.active_admin_comment {
 .filter_form_field input, .filter_form_field .select2-container {
   margin-right: 10px !important;
 }
+
+body.active_admin.admin_dashboard #main_content {
+  background: transparent;
+  box-shadow: none;
+  .panel {
+    margin-top: 20px;
+  }
+}
+
+.columns .column {
+  float: left;
+}

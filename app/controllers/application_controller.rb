@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
-  include Pundit
   protect_from_forgery
+
+  include Pundit
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  impersonates :user
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_paper_trail_whodunnit
@@ -17,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_for_paper_trail
-    current_admin_user || current_user
+    current_admin_user || true_user
   end
 
   private

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  # authenticate :admin_user do
-  #   mount Sidekiq::Web => '/sidekiq'
-  # end
+  authenticate :admin_user do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end

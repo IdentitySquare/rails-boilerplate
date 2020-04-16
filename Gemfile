@@ -45,6 +45,8 @@ gem 'strong_password'
 
 gem 'activeadmin'
 gem 'activeadmin_addons'
+gem 'pretender'
+
 
 # Frontend
 gem 'haml-rails', '~> 2.0'
