@@ -56,6 +56,8 @@ gem 'high_voltage', '~> 3.1'
 gem 'simple_form'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
+gem 'meta-tags'
+
 
 group :production do
   gem 'rack-timeout'

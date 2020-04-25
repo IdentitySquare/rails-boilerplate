@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   impersonates :user
   before_action :set_paper_trail_whodunnit
 
+  before_action :set_default_meta_tags
+
   protected
 
   def pundit_user
@@ -22,6 +24,11 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:error] = t('application.not_authorized')
     redirect_to(request.referrer || root_path)
+  end
+
+  def set_default_meta_tags
+    set_meta_tags generator: 'Identity Square / www.identitysquare.com'
+    set_meta_tags viewport: 'width=device-width, initial-scale=1'
   end
 
 end
