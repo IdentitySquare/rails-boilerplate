@@ -42,6 +42,7 @@ gem 'valid_email2'
 gem 'pundit'
 gem 'paper_trail'
 gem 'strong_password'
+gem "paranoia", "~> 2.2"
 
 gem 'activeadmin'
 gem 'activeadmin_addons'
