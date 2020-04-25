@@ -3,12 +3,16 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'omniauth_callbacks'
   }
 
   resource :user, only: [] do
     collection do
       patch 'update_password'
+      
+      get 'finish_signup'
+      patch 'finish_signup'
     end
   end
 

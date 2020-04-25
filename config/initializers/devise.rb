@@ -260,6 +260,21 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :google_oauth2,
+    Rails.application.credentials.dig(:google, :client_id),
+    Rails.application.credentials.dig(:google, :client_secret),
+    {
+      image_aspect_ratio: 'square',
+      image_size: 200
+    }
+
+  config.omniauth :facebook,
+    Rails.application.credentials.dig(:google, :app_id),
+    Rails.application.credentials.dig(:google, :app_secret),
+    {
+      image_size: 'large',
+      secure_image_url: true
+    }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

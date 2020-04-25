@@ -61,27 +61,17 @@ Go to `config/database.yml` to change your database names and authentication met
 
 ## 2. Setting your secret keys
 
-Add `config/master.key` with the value: `90b6ee492f968d798af41d5f91a532ba`.
-DO NOT checking this file to Git.
-
 Opens the encrypted file in an editor. We use atom.
 
 ```
   EDITOR="atom --wait" rails credentials:edit
 ```
 
-Reading variables:
-```
-  Rails.application.credentials.dig(Rails.env.to_sym, :hello)
-  Rails.application.credentials.dig(Rails.env.to_sym, :secret_key)
-```
-
-
 ##### Changing the `master.key`
-1. Open all the encrypted files, copy the values and save it temporarily.
-2. Delete the `master.key` and encrypted files in `config/credentials` folder and the file `config/credentials.yml.enc`.
-3. Run the above commands to edit the encrypted files. Which will generate a new `master.key`.
-4. Paste in the values of copied in step 1 into the Encrypted files.
+1. Delete the `master.key` and the encrypted file `config/credentials.yml.enc`.
+2. Run the above commands to edit the encrypted files. Which will generate a new `master.key`.
+3. Copy and paste the values from `config/credentials.template.yml` to the encrypted file.
+
 
 
 ## 3. Deploying to Heroku:
@@ -106,3 +96,5 @@ On Heroku use Mailgun or setup the following ENV variables:
   ENV['SMTP_ADDRESS']
   ENV['MAILGUN_SMTP_PORT']
 ```
+
+## 5. Omniauth with Google & Facebook

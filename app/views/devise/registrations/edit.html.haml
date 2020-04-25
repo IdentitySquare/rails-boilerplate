@@ -39,3 +39,7 @@
         = f.input :current_password, hint: "We need your current password to update your password"
 
         = f.submit "Update password", class: 'btn btn-lg btn-block btn-primary mb-3'
+
+
+
+= link_to 'Destroy', user_registration_path, :confirm => 'Are you sure you want to destroy your account?', :method => :delete
