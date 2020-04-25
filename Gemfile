@@ -35,6 +35,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Backend
 gem 'friendly_id', '~> 5.2.4'
 gem 'raygun4ruby'
+gem 'rack-timeout'
 gem 'sitemap_generator'
 gem 'sidekiq'
 gem 'strong_migrations'
