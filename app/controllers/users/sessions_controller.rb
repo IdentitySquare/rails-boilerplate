@@ -9,9 +9,19 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    # Take into account acts_as_paranoid deleted users
+    if (resource = resource_class.only_deleted.find_by_email(params[resource_name][:email]))
+      if resource.valid_password?(params[resource_name][:password]) && resource.recover!
+        flash[:notice] = "Your account has been restored!"
+        # TODO: send email to user saying that their account has been restored
+
+        sign_in resource
+      end
+    end
+
+    super
+  end
 
   # DELETE /resource/sign_out
   # def destroy

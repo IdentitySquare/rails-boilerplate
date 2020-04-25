@@ -48,8 +48,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # default soft deletes
     super do
       # if user permanently wants to delete their account
-      if params[:user]&[:really_destory]
+      if params[:really_destroy]
         resource.destroy_fully!
+        flash[:notice] = "Bye! Your account has been deleted permanently. We hope to see you again soon."
       end
     end
   end

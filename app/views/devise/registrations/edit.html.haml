@@ -43,3 +43,7 @@
 
 
 = link_to 'Destroy', user_registration_path, :confirm => 'Are you sure you want to destroy your account?', :method => :delete
+
+= simple_form_for @user, url: user_registration_path,  method: :delete do |f|
+  = hidden_field_tag 'really_destroy', 'true'
+  = f.submit 'Permanently delete'
