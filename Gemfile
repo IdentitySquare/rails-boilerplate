@@ -35,7 +35,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Backend
 gem 'friendly_id', '~> 5.2.4'
 gem 'raygun4ruby'
-gem 'rack-timeout'
 gem 'rack-canonical-host'
 gem 'sitemap_generator'
 gem 'sidekiq'
@@ -58,6 +57,9 @@ gem 'simple_form'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 
+group :production do
+  gem 'rack-timeout'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
