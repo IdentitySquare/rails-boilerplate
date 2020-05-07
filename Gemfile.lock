@@ -75,6 +75,9 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
+    acts_as_paranoid (0.6.3)
+      activerecord (>= 4.2, < 7.0)
+      activesupport (>= 4.2, < 7.0)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     annotate (3.1.1)
@@ -114,6 +117,8 @@ GEM
       warden (~> 1.2.3)
     erubi (1.9.0)
     erubis (2.7.0)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
@@ -134,6 +139,7 @@ GEM
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    hashie (4.1.0)
     high_voltage (3.1.2)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
@@ -157,6 +163,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.3.0)
+    jwt (2.2.1)
     kaminari (1.2.0)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.0)
@@ -184,6 +191,8 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
+    meta-tags (2.13.0)
+      actionpack (>= 3.2.0, < 6.1)
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
@@ -193,10 +202,30 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     msgpack (1.3.3)
+    multi_json (1.14.1)
     multi_xml (0.6.0)
+    multipart-post (2.1.1)
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    oauth2 (1.4.4)
+      faraday (>= 0.8, < 2.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    omniauth (1.9.1)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+    omniauth-facebook (6.0.0)
+      omniauth-oauth2 (~> 1.2)
+    omniauth-google-oauth2 (0.8.0)
+      jwt (>= 2.0)
+      omniauth (>= 1.1.1)
+      omniauth-oauth2 (>= 1.6)
+    omniauth-oauth2 (1.6.0)
+      oauth2 (~> 1.1)
+      omniauth (~> 1.9)
     orm_adapter (0.5.0)
     paper_trail (10.3.1)
       activerecord (>= 4.2)
@@ -212,12 +241,16 @@ GEM
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (2.2.2)
+    rack-canonical-host (1.0.0)
+      addressable (> 0, < 3)
+      rack (>= 1.0.0, < 3)
     rack-protection (2.0.8.1)
       rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
+    rack-timeout (0.6.0)
     rails (6.0.2.2)
       actioncable (= 6.0.2.2)
       actionmailbox (= 6.0.2.2)
@@ -348,6 +381,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   activeadmin_addons
+  acts_as_paranoid
   annotate
   awesome_print
   better_errors
@@ -364,11 +398,17 @@ DEPENDENCIES
   kaminari
   letter_opener
   listen (>= 3.0.5, < 3.2)
+  meta-tags
+  omniauth
+  omniauth-facebook
+  omniauth-google-oauth2
   paper_trail
   pg (>= 0.18, < 2.0)
   pretender
   puma (~> 4.1)
   pundit
+  rack-canonical-host
+  rack-timeout
   rails (~> 6.0.2, >= 6.0.2.2)
   raygun4ruby
   sass-rails (>= 6)
