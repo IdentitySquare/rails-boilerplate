@@ -1,0 +1,9 @@
+- if flash_messages_display&.any?
+  - alert_style = flash_message_color(flash_messages_display.keys)
+
+  .alert.alert-dismissible{role: "alert", class: "alert-#{alert_style}"}
+    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+      %span{"aria-hidden" => "true"} &times;
+    - flash_messages_display.each do |key, value|
+      %p.m-0{class: "alert_#{key}"}
+        = value

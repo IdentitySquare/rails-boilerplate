@@ -1,0 +1,32 @@
+.mt-5.container
+  .row.justify-content-center
+    .col-10.col-md-6.col-xl-4.my-5
+
+
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+
+        -# = render partial: "layouts/flash_alert"
+
+        .form-group
+          = f.label :email
+          = f.email_field :email, autofocus: false, autocomplete: "email", class: 'form-control', placeholder: true, tabindex: 1
+
+        .form-group
+          .row
+            .col
+              = f.label :password
+            .col-auto
+              = link_to "Forgot password?", new_password_path(resource_name), class: 'form-text small text-muted'
+
+          .input-group.input-group-merge
+            = f.password_field :password, autocomplete: "password", class: 'form-control', placeholder: true, tabindex: 2
+
+        - if devise_mapping.rememberable?
+          .mb-3
+            .custom-control.custom-switch
+              = f.check_box :remember_me, class: 'custom-control-input'
+              = f.label :remember_me, class: 'custom-control-label text-small'
+
+        = f.submit "Sign In", class: 'btn btn-lg btn-block btn-primary mb-3'
+
+        = render "devise/shared/links"
