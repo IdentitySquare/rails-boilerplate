@@ -76,6 +76,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_bot'
   gem 'capybara'
+
+  gem 'bullet'
 end
 
 group :development do
@@ -91,7 +93,6 @@ group :development do
   gem 'awesome_print'
 
   gem 'annotate'
-  gem 'bullet'
   gem 'letter_opener'
 end
 
