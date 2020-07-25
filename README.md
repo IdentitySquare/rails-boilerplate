@@ -18,6 +18,14 @@ A standard set of gems, libraries and configurations we use for our new projects
 * Sidekiq
 * Redis
 * Friendly IDs
+* raygun4ruby
+* sitemap_generator
+* strong_migrations
+* paper_trail
+* strong_password
+* acts_as_paranoid
+* pretender
+* valid_email2
 
 *Frontend*:
 * HAML
@@ -25,6 +33,9 @@ A standard set of gems, libraries and configurations we use for our new projects
 * SASS
 * Simple Forms
 * High Voltage
+* kaminari
+* bootstrap4-kaminari-views
+* meta-tags
 
 *Development tools:*
 * Better Errors
